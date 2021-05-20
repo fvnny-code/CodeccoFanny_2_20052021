@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    color: #333;
+    text-decoration: none;
+}
+/* header */
+
+header{
+    margin: 20px 40px;
+    display: flex;
+    float: none;
+    line-height: normal;
+    position: static;
+}
+header #header{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul{
+    display:flex;
+}
+nav li{
+    padding: 0 20px;
+    line-height: 40px;
+}
+#register{
+    box-sizing: border-box;
+    align-items: center;
+    display:flex;
+    float: none;
+    line-height: normal;
+    position: static;
+   
+}
+#register a{
+    font-weight: bold;
+    color: #0065fc;
+}

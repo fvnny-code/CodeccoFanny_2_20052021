@@ -60,7 +60,6 @@ a {
   
   /* SECTION 1 */
 
-
 .map-filter{
 padding: 1em 0;
 }
@@ -76,6 +75,7 @@ h1 {
     font-weight: normal;
     text-align: center;
   }
+/* search */
 
   form {
     height: 50px;
@@ -156,3 +156,144 @@ i.fa-info{
     float: left; /* sinon le texte va passer dessous sans marge */
     top: -10px;
 }
+
+/* SECTION 2  HÉBERGEMENTS */
+
+.lodging{
+  display: flex;
+
+}
+
+/* par ville */
+
+/* .lodging{
+  padding: 1em;
+} */
+
+.container-city, .container-popular{
+    padding: 2em;
+    margin: 2em 4.5em 0 -2.5em;
+    background: #F2F2F2;
+    border-radius: 30px;
+
+}
+
+.card-box{
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+
+}
+.card-hotel{
+  box-shadow: 0 0 10px rgba(33,33,33, 0.2) ;
+  background: white;
+  margin: 20px 10px;
+  border: 5px solid white ;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 220px;
+  min-width: 300px;
+
+}
+.card-hotel:hover{
+  box-shadow: 2px 2px 12px rgba(40,40,40, 0.4);
+}
+.card-hotel.img-wrapper{
+height: 150px;
+width: 100%;
+margin: 0;
+}
+.card-hotel img{
+object-fit: cover;
+height: 120px;
+width: 100%;
+}
+.card-hotel .text-wrapper{
+  padding: 0.5em;
+
+}
+.price{
+font-weight: bolder;
+}
+i{
+  color : #0065FC;
+}
+.star-empty{
+  color: grey;
+}
+
+/* plus d'infos */
+.show-more {
+    padding: 1em 0;
+    font-size: 18px;
+    border: none;
+    font-weight: bold;
+    background: none;
+    cursor: pointer;
+  }
+
+  /* les plus populaires */
+
+.container-popular{
+  order: -1;
+  width: 100%;
+ 
+}
+
+.container-popular .clr-black{
+  color: black;
+  float: right;
+}
+.container-popular .card-box{
+display: block;
+}
+.card-popular{
+  display: flex;
+  border: 5px solid white ;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(33,33,33, 0.2) ;
+  background: white;
+  margin: 20px 10px;
+  
+  overflow: hidden;
+  height: 170px;
+  max-width: 600px;
+ 
+}
+.card-popular:hover{
+  box-shadow: 2px 2px 12px rgba(40,40,40, 0.4);
+}
+.card-popular .img-wrapper{
+  height: 100%;
+  width: 130px;
+  margin: 0;
+}
+.card-popular img{
+  object-fit: cover;
+  width: 130px;
+  height:100%;
+}
+.card-popular .text-wrapper{
+  padding: 0.5em 2em;
+  margin: 0;
+  min-width: 300px;
+  font-size: 15px;
+  position: relative;
+}
+.card-popular h3{
+margin: 0;
+}
+.card-popular p{
+margin-top: 0.5em;
+}
+.card-popular .stars{
+  position: absolute;
+  bottom: 10px;
+}
+
+/* SECTION 3 ACTIVITES */
+
+
+
+
+/* FOOTER */

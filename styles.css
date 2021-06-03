@@ -31,13 +31,13 @@ a {
 }
 
 .navbar>*:not(.main-nav) {
-  padding: 1em 30px;
+  padding: 2em 30px;
 }
 
 .navbar .main-nav {
   display: flex;
   width: 100%;
-  order: 1;
+  order: 2;
 }
 
 .navbar .main-nav a {
@@ -46,11 +46,11 @@ a {
   width: 50%;
   padding: 1em;
   border-bottom: 3px solid #F2F2F2;
-  /*transition: border 0.5s ease;*/
+
 }
 
 .navbar .main-nav a:hover {
-  font-weight: 600;
+  font-weight: bold;
   text-decoration: none;
   color: #0065FC;
   border-bottom: 3px solid #0065FC;
@@ -60,6 +60,12 @@ a {
   color: #0065FC;
   font-weight: bold;
   text-decoration: none;
+}
+
+.navbar a#subscribe:hover{
+  color:  black;
+  font-size: 18px;
+  font-weight: bolder;
 }
 
 /* SECTION 1 */
@@ -100,6 +106,7 @@ form input {
   border: none;
   /* padding: 0.5em 1em; */
   font-size: 16px;
+  
 }
 
 form input:focus {
@@ -110,6 +117,26 @@ form .fa-map-marker-alt {
   border-radius: 15px 0 0 15px;
   padding: 16px;
   background: #F2F2F2;
+  color: black;
+}
+
+form .fa-search {
+  padding: 15px 10px;
+  color: white;
+  
+}
+
+form .search {
+  font-size: 16px;
+  position: absolute;
+  right: 0;
+  border: none;
+  border-radius: 0 15px 15px 0;
+  background: #0065FC;
+  color: white;
+  padding: 0.85em;
+  
+  display: none;
 }
 
 form .search-icon {
@@ -119,15 +146,7 @@ form .search-icon {
   border: none;
   border-radius: 15px;
   background: #0065FC;
-}
-
-form .fa-search {
-  padding: 15px 10px;
-  color: white;
-}
-
-form .search {
-  display: none;
+  /* display: none; */
 }
 
 /* TAGS */
@@ -147,14 +166,14 @@ form .search {
   border-radius: 25px;
   margin: 1.5em 1.5em;
   margin-left: 0;
-  padding: 0 10px;
+  padding: 0 15px;
   font-weight: bold;
   font-size: 14px;
 }
 
 .tag i {
   position: relative;
-  left: -12px;
+  left: -15px;
   color: #0065FC;
   background-color: #DEEBFF;
   border-radius: 20px;
@@ -180,19 +199,20 @@ i.fa-info {
 
 .lodging {
   display: flex;
+  
+
 }
 
 /* par ville */
 
-/* .lodging{
-  padding: 1em;
-} */
-
-.container-city, .container-popular {
+.container-city, .container-popular{
   padding: 2em;
-  margin: 2em 4.5em 0 -2.5em;
+  margin: 0.5em 3em 0.5em -0.5em;
   background: #F2F2F2;
   border-radius: 30px;
+}
+.container-city h1, .show-more{
+  margin-left: 1em;
 }
 
 .card-box {
@@ -204,12 +224,13 @@ i.fa-info {
 .card-hotel {
   box-shadow: 0 0 10px rgba(33, 33, 33, 0.2);
   background: white;
-  margin: 20px 10px;
+  margin: 1.5em 1.3em;
+  
   border: 5px solid white;
   border-radius: 15px;
   overflow: hidden;
   height: 220px;
-  min-width: 300px;
+  min-width: 340px;
 }
 
 .card-hotel:hover {
@@ -257,9 +278,9 @@ i {
 
 /* les plus populaires */
 
-.container-popular {
-  order: -1;
-  width: 100%;
+
+.container-popular h1{
+  padding-left: 0.5em;
 }
 
 .container-popular .clr-black {
@@ -371,6 +392,7 @@ i {
 }
 
 .card-activity {
+  border: none;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(33, 33, 33, 0.2);
   background: white;
@@ -378,11 +400,11 @@ i {
   overflow: hidden;
   height: 170px;
   max-width: 600px;
-  border: none;
+  width: 100%;
   display: inline-block;
   vertical-align: top;
   margin: 10px 0;
-  width: 100%;
+ 
 }
 
 .card-activity .img-wrapper {

@@ -460,7 +460,7 @@ h1 p {
   height: 95%; */
   display: flex;
 flex-wrap: wrap;
-gap: 0.5em
+gap: 0.5em;
 flex: 1 1 20em;
  
 }

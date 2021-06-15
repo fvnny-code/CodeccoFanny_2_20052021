@@ -17,6 +17,7 @@
 <body>
 
     <!-- HEADER -->
+    <!-- REFAIRE AVEC DES GRIDS -->
 
     <header>
         <div class="header-logo">
@@ -26,9 +27,9 @@
         <nav class="main-nav">
             <a href="#lodging">Hébergements</a>
             <a href="#activities">Activités</a>
-            <a id="subscribe" href="#">S'inscrire</a>
             <!-- les ancres inactives -->
         </nav>
+        <a id="subscribe" href="#">S'inscrire</a>
     </header>
 
     <main>
@@ -43,9 +44,10 @@
             <form id="searchbar" method="pos" action="#">
                 <i class="fas fa-map-marker-alt clr-black"></i>
                 <input type="search" type="text" placeholder=" Marseille, France" aria-label="Rechercher" />
-
                 <button type="submit" class="search">Rechercher</button>
-                <button type="button" class="search-icon"><i class="fas fa-search fa-lg"></i></button>
+                <button type="button" class="search-icon"><i class="fas fa-search fa lg"></i>
+                </button>
+
                 <!-- un ° s'affiche. A rectifier  -->
             </form>
 
@@ -88,7 +90,7 @@
                     <a href="#">
                         <article class="card">
                             <div class="card-header">
-                                <img src="/images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
+                                <img src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
                                     alt="Chambre de l'auberge La Cannebière" />
                             </div>
                             <div class="card-body">
@@ -109,7 +111,7 @@
                     <a href="#">
                         <article class="card">
                             <div class="card-header">
-                                <img src="/images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg"
+                                <img src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg"
                                     alt="Chambre de l'Hotel du Port">
                             </div>
                             <div class="card-body">
@@ -130,7 +132,7 @@
                     <a href="#">
                         <article class="card">
                             <div class="card-header">
-                                <img src="/images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg"
+                                <img src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg"
                                     alt="Chambre de l'Hôtel des mouettes">
                             </div>
                             <div class="card-body">
@@ -151,7 +153,7 @@
                     <a href="#">
                         <article class="card">
                             <div class="card-header">
-                                <img src="/images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg"
+                                <img src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg"
                                     alt="Chambre de l'Hôtel de la mer">
                             </div>
                             <div class="card-body">
@@ -193,7 +195,7 @@
                     <a href="#">
                         <article class="card">
                             <div class="card-header">
-                                <img src="/images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"
+                                <img src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"
                                     alt="Chambre de l'Hôtel chez Amina">
                             </div>
                             <div class="card-body">
@@ -218,8 +220,11 @@
 
             <!-- les plus populaires -->
             <aside class="container-popular">
-                <h1>Les plus populaires <i class="fas fa-chart-line clr-black"></i></h1>
+                <div class="text">
+                    <h1>Les plus populaires<i class="fas fa-chart-line clr-black"></i></h1>
+                   
 
+                </div>
                 <div class="card-box-pop">
                     <a href="#">
                         <article class="card-aside">
@@ -228,10 +233,12 @@
                                     alt="Chambre de l'Hôtel du soleil du matin" />
                             </div>
                             <div class="card-body">
-                                <h3 class="card-title">Hôtel le soleil du matin</h3>
-                                <p>Nuit à partir de <span class="price">
-                                        <strong>128€</strong>
-                                    </span></p>
+                                <div class="text">
+                                    <h3 class="card-title">Hôtel le soleil du matin</h3>
+                                    <p>Nuit à partir de <span class="price">
+                                            <strong>128€</strong>
+                                        </span></p>
+                                </div>
                                 <span class="stars">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -293,21 +300,21 @@
 
         <section class="activities">
             <h1>Activités à Marseille</h1>
+            <!-- <div class="choices"> -->
             <div class="container-act">
-
-                <a href="#" class="card-big">
-                    <div class="card-header-big">
-                        <img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"
-                            alt="vue du Vieux Port de Marseille" />
-                    </div>
-                    <div class="card-body">
-                        <h3>Vieux Port</h3>
-                    </div>
-                </a>
-
+                <div class="box-big">
+                    <a href="#" class="card-big">
+                        <div class="card-header-big">
+                            <img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"
+                                alt="vue du Vieux Port de Marseille" />
+                        </div>
+                        <div class="card-body">
+                            <h3>Vieux Port</h3>
+                        </div>
+                    </a>
+                </div>
                 <div class="box-medium-small">
                     <a href="#" class="card-medium">
-
                         <div class="card-header-medium">
                             <img src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg"
                                 alt="vue du Fort de Pomègues, Marseille" />
@@ -328,17 +335,18 @@
                     </a>
                 </div>
 
+                <div class="box-big">
+                    <a href="#" class="card-big">
+                        <div class="card-header-big">
+                            <img src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"
+                                alt="vue du Parc National des Calanques, Marseille" />
+                        </div>
+                        <div class="card-body">
+                            <h3>Parc National des Calanques</h3>
+                        </div>
 
-                <a href="#" class="card-big">
-                    <div class="card-header-big">
-                        <img src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"
-                            alt="vue du Parc National des Calanques, Marseille" />
-                    </div>
-                    <div class="card-body">
-                        <h3>Parc National des Calanques</h3>
-                    </div>
-
-                </a>
+                    </a>
+                </div>
                 <div class="box-medium-small">
                     <a href="#" class="card-small">
 
@@ -365,7 +373,6 @@
             </div>
 
         </section>
-
     </main>
     <!-- FOOTER -->
     <footer>
@@ -397,4 +404,5 @@
     </footer>
 
 </body>
+
 </html>

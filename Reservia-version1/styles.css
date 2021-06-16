@@ -338,11 +338,6 @@ visibility: hidden;
   margin-top: 0;
 }
 
-.container-city .card-body .stars {
-  position: relative;
-  top: 0.5em;
-}
-
 /* plus d'infos */
 
 .show-more {
@@ -379,7 +374,7 @@ visibility: hidden;
 .card-box-pop {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
+ 
   gap: 3em;
 }
 
@@ -403,7 +398,7 @@ visibility: hidden;
   object-fit: cover;
 }
 
-.card-aside .card-body { /* NE FONCTIONNE PAS */
+.card-aside .card-body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;

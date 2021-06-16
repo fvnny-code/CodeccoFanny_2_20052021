@@ -34,61 +34,58 @@ a {
 
 /* HEADER */
 
-/* header-logo */
-
 header {
-  margin: 0 3.5%;
+  display: grid;
+  grid-template-columns: 700px 1fr 300px 150px;
+  grid-template-rows: 100px ;
+  margin: 0 50px 0 50px;
+  }
+  
+  .header-logo {
+  padding: 2em 1em;
+  
+  }
+  
+  /* Nav */
+  
+  .main-nav{
+      display: flex;
+      justify-content: flex-end;
+  
+  }
+  
+  .main-nav a {
   display: flex;
-  align-items: center;
-}
-
-.header-logo {
-  display: flex;
-  width: 70%;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.subscribe-mobile {
-  visibility: hidden;
-}
-
-/* Nav */
-
-.main-nav {
-  display: flex;
-  vertical-align: top;
-}
-
-.main-nav a {
-  display: flex;
-  justify-content: space-between;
-  text-decoration: none;
-  text-align: center;
-  width: 50%;
-  padding: 1.5em;
-  padding-top: 4em;
-}
-
-.main-nav a:hover {
-  font-weight: bold;
-  text-decoration: none;
-  color: #0065FC;
-  border-top: 3px solid #0065FC;
-}
-
-#subscribe, .subscribe-mobile {
-  color: #0065FC;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-#subscribe:hover, .subscribe-mobile:hover {
-  color: #0049b8;
-  font-size: 18px;
-  font-weight: bolder;
-  border: none;
-}
+  
+      text-decoration: none;
+      padding: 1.5em;
+      padding-top: 4em;
+  }
+  
+  .main-nav a:hover {
+      font-weight: bold;
+      text-decoration: none;
+      color: #0065FC;
+      border-top: 3px solid #0065FC;
+  } 
+  
+  #subscribe {
+      color: #0065FC;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 1.5em ;
+      padding-top: 4em;
+      display: flex;
+      
+  }
+  
+  #subscribe:hover {
+      color: #0049b8;
+      font-size: 18px;
+      font-weight: bolder;
+      border: none;
+  }
+  
 
 /* Media Queries */
 
@@ -99,39 +96,31 @@ header {
   }
   /* Header */
   header {
-    max-width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .header-logo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.main-nav{
+margin-top: 1em;
+grid-column-start: span 2;
+    
+}
+nav a {
+
     width: 100%;
-    padding: 1.5em;
-  }
-  #subscribe {
-    display: none;
-  }
-  .subscribe-mobile {
-    visibility: visible;
-  }
-  /* Nav */
-  .main-nav {
-    display: flex;
-    width: 100%;
-  }
-  nav a {
-    width: 50%;
-    display: flex;
-    text-align: center;
     padding: 1em;
     border-bottom: 3px solid #F2F2F2;
-  }
-  .main-nav a:hover {
+}
+.main-nav a:hover {
     border-top: none;
     border-bottom: 3px solid #0065FC;
-  }
+}
+
+#subscribe{
+grid-area: 2/2/1/2;
+padding-top: 3em;
+}
 }
 
 /* SECTION 1 */

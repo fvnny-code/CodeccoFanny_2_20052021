@@ -115,13 +115,16 @@ header {
 }
 
 /* SECTION 1 */
-
 #search {
-  padding: 40px;
+  padding: 1em;
+}
+
+#infos {
+  margin: 2em 0;
 }
 
 h1 {
-  /* margin-right: 1em; */
+  margin-right: 1em;
   font-size: 1.5em;
   font-weight: bold;
 }
@@ -138,13 +141,16 @@ h1 p {
   max-width: 500px;
   border-radius: 15px;
   border: 2px solid #F2F2F2;
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 #searchbar input {
   font-weight: bold;
   border: none;
   font-size: 17px;
+  width: fit-content;
 }
 
 ::placeholder {
@@ -152,11 +158,7 @@ h1 p {
   opacity: 1;
 }
 
-#searchbar input:focus {
-  outline: none;
-}
-
-#searchbar i {
+#searchbar .fa-map-marker-alt {
   border-radius: 15px 0 0 15px;
   padding: 16px;
   background: #F2F2F2;
@@ -164,33 +166,36 @@ h1 p {
 }
 
 #searchbar .search {
-  padding: 15px 10px;
-  color: white;
-}
-
-#searchbar .search {
   font-size: 16px;
-  position: absolute;
-  right: 0;
   border: none;
   border-radius: 0 15px 15px 0;
   background: #0065FC;
   color: white;
-  padding: 0.85em;
-  /* display: none; */
+  padding: 0.9em;
+  margin-left: 10rem;
 }
 
-#searchbar .search-icon i {
-  font-size: 15px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 1em;
+#searchbar .search:hover {
+  font-size: 17px;
+  background: #0049b8;
+}
+
+#searchbar .search-icon {
   border: none;
   border-radius: 15px;
   background: #0065FC;
   color: white;
-visibility: hidden;
+  visibility: hidden;
+}
+
+#searchbar .search-icon:hover {
+  background: #0049b8;
+}
+
+#searchbar .search-icon .fa-search {
+  font-size: 18px;
+  padding: 0.85em;
+  color: white;
 }
 
 /* TAGS */
@@ -211,9 +216,9 @@ visibility: hidden;
   background-color: white;
   border: 2px solid #F2F2F2;
   border-radius: 40px;
-  margin: 1.5em;
+  margin: 1.5em 3em;
   margin-left: 0;
-  padding: 0 0.9em;
+  padding: 0 1em;
   font-weight: bold;
   font-size: 14px;
 }
@@ -227,13 +232,12 @@ visibility: hidden;
   padding: 1.4em;
 }
 
-.tag i fa-child {
+.tag i .fa-child {
   padding: 15px 17px
 }
 
 .tag :hover {
   background-color: #F2F2F2;
-  transform: scale(1.1);
 }
 
 /* search results */
@@ -251,21 +255,18 @@ visibility: hidden;
 
 @media screen and (max-width: 900px) {
   #searchbar {
-    margin-bottom: 2em;
-    width: max-content;
-    /* pour que la taille du champs de saisie s'adapte au contenu */
+    margin-bottom: 3em;
   }
   #searchbar .search {
     display: none;
   }
-  #searchbar .search-icon i {
+  #searchbar .search-icon, .fa-search {
     visibility: visible;
   }
   .tags {
     display: block;
   }
 }
-
 
 /* SECTION 2  HÉBERGEMENTS */
 
@@ -329,9 +330,9 @@ visibility: hidden;
 
 .card-body {
   padding: 0.5em;
- display: flex;
- flex-direction: column;
- justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card-title {
@@ -374,7 +375,6 @@ visibility: hidden;
 .card-box-pop {
   display: flex;
   flex-direction: column;
- 
   gap: 3em;
 }
 
@@ -405,68 +405,67 @@ visibility: hidden;
   padding: 1em;
 }
 
-.card-aside .card-body .price{
+.card-aside .card-body .price {
   font-weight: bolder;
 }
 
-
 @media screen and (max-width: 900px) and (min-width: 414px) {
   .lodging {
-      padding: 0;
+    padding: 0;
   }
   .container-city {
-      background: white;
-      min-height: 250px;
-      flex: 1 1 100%;
-      width: 100%;
-      padding: 0;
-      justify-content: center;
+    background: white;
+    min-height: 250px;
+    flex: 1 1 100%;
+    width: 100%;
+    padding: 0;
+    justify-content: center;
   }
   /* .container-city h1 {
       text-align: center;
   } */
   .card-box {
-      display: flex;
-      flex-direction: column;
-      flex: 1 1 100%;
-     justify-content: center;
-      padding: 1em;
-      gap: 1em;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+    justify-content: center;
+    padding: 1em;
+    gap: 1em;
   }
   .card {
-      box-shadow: 0 0 10px rgba(33, 33, 33, 0.2);
-      background: white;
-      border: 5px solid white;
-      border-radius: 15px;
-      overflow: hidden;
-      object-fit: cover;
-      height: 250px;
-      width: 100%;
+    box-shadow: 0 0 10px rgba(33, 33, 33, 0.2);
+    background: white;
+    border: 5px solid white;
+    border-radius: 15px;
+    overflow: hidden;
+    object-fit: cover;
+    height: 250px;
+    width: 100%;
   }
   .container-popular {
-      border-radius: 0;
-      width: 100%;
-      min-height: 200px;
-      flex: 1 1 100%;
-      min-width: 40ch;
+    border-radius: 0;
+    width: 100%;
+    min-height: 200px;
+    flex: 1 1 100%;
+    min-width: 40ch;
   }
   .container-popular h1 {
-      font-size: 1.6em;
-      padding: 0.5em;
+    font-size: 1.6em;
+    padding: 0.5em;
   }
   .card-box-pop {
-      display: flex;
-      justify-content: center;
+    display: flex;
+    justify-content: center;
   }
   .card {
-      box-shadow: 0 0 10px rgba(33, 33, 33, 0.2);
-      background: white;
-      border: 5px solid white;
-      border-radius: 15px;
-      overflow: hidden;
-      object-fit: cover;
-      height: 250px;
-      width: 100%;
+    box-shadow: 0 0 10px rgba(33, 33, 33, 0.2);
+    background: white;
+    border: 5px solid white;
+    border-radius: 15px;
+    overflow: hidden;
+    object-fit: cover;
+    height: 250px;
+    width: 100%;
   }
 }
 
@@ -572,36 +571,33 @@ visibility: hidden;
 }
 
 @media screen and (max-width: 900px) {
-
   /* HAUTEUR DES CARDS + OU - OK avec display: block;(ligne 599) */
-
   /* PROBLÈME AVEC LES .CARD-BIG :shadow-box, le padding dans card-body,marging-bottom avec les autres cards */
-
   /* PROBLÈME DE CENTRAGE DES ÉLÉMENTS = OK (?) avec un padding un peu asymétrique ligne 585 */
-
   .container-act {
-      flex-direction: column;
-      flex-wrap: wrap;
-      padding: 1rem 3rem 1rem 0.5rem; /* pour résoudre le souci de débordement survenu .... à un moment */
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 1rem 3rem 1rem 0.5rem;
+    /* pour résoudre le souci de débordement survenu .... à un moment */
   }
   .box-big, .box-medium-small {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      margin: auto;
-      /* gap: 1em; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    /* gap: 1em; */
   }
   .card-big, .card-medium, .card-small {
-      width: 100%;
-      height: 250px;
-      /* display: flex;
+    width: 100%;
+    height: 250px;
+    /* display: flex;
       flex-direction: column;
       flex: 1; */
-      display: block;
-      margin: 1em;
+    display: block;
+    margin: 1em;
   }
   .card-body {
-      padding-bottom: 1.5em;
+    padding-bottom: 1.5em;
   }
 }
 

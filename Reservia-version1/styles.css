@@ -482,6 +482,7 @@ visibility: hidden;
   overflow: hidden;
   object-fit: cover;
   display: flex;
+  flex-direction: row;
 }
 
 .box-big, .box-medium-small {
@@ -489,17 +490,18 @@ visibility: hidden;
   border-radius: 30px;
   display: flex;
   flex-direction: column;
-  gap: 3em;
-  flex: 1 1 45%;
+  flex: 1;
   width: 45%;
-  min-width: 40ch;
   object-fit: cover;
+}
+
+.box-medium-small {
+  gap: 2.5em;
 }
 
 .card-big {
   width: 80%;
   height: 80%;
-  /* border: none; */
   border-radius: 1.5em;
   display: flex;
   flex-direction: column;
@@ -512,7 +514,7 @@ visibility: hidden;
   border-radius: 1.5em;
   display: flex;
   flex-direction: column;
-  box-shadow: 0.2em 0.2em 1em grey;
+  box-shadow: 0.2em 0.2em 2em grey;
 }
 
 .card-small {
@@ -521,7 +523,11 @@ visibility: hidden;
   border-radius: 1.5em;
   display: flex;
   flex-direction: column;
-  box-shadow: 0.2em 0.2em 1em grey;
+  box-shadow: 0.2em 0.2em 2em grey;
+}
+
+.card-big:hover, .card-medium:hover, .card-small:hover {
+  box-shadow: 0.2em 0.2em 2em rgb(63, 63, 63);
 }
 
 .card-header-big {
@@ -559,63 +565,43 @@ visibility: hidden;
   background: white;
   height: 10%;
   text-align: left;
-  padding-top: 1em;
-  padding-left: 1em;
+  padding: 0.5em 0.5em 1em 0.5em;
+  /* padding-top: 0.5em;
+  padding-bottom: 1em; */
   border-radius: 0 0 1.5rem 1.5em;
 }
 
 @media screen and (max-width: 900px) {
-  /* PROBLÈME DE HAUTEUR AVEC LES CARD-MEDIUM */
-  
-  .activities{
-    padding: 2em 0;
-  }
-  .activities h1 {
-    padding-left: 2em;
-  }
+
+  /* HAUTEUR DES CARDS + OU - OK avec display: block;(ligne 599) */
+
+  /* PROBLÈME AVEC LES .CARD-BIG :shadow-box, le padding dans card-body,marging-bottom avec les autres cards */
+
+  /* PROBLÈME DE CENTRAGE DES ÉLÉMENTS = OK (?) avec un padding un peu asymétrique ligne 585 */
+
   .container-act {
-    margin: auto;
-   
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+      flex-direction: column;
+      flex-wrap: wrap;
+      padding: 1rem 3rem 1rem 0.5rem; /* pour résoudre le souci de débordement survenu .... à un moment */
   }
   .box-big, .box-medium-small {
-    /* padding: 1.5em; */
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    flex: 1 1 100%;
-    width: 100%;
-    /* min-width: 40ch; */
-    object-fit: cover;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: auto;
+      /* gap: 1em; */
   }
   .card-big, .card-medium, .card-small {
-    width: 100%;
-    height: 100%;
-    border-radius: 1.5em;
-    display: flex;
-    flex-direction: column;
-  }
-  .card-header-big, .card-header-medium, .card-header-small {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 85%;
-    object-fit: cover;
-  }
-  .card-header-big img, .card-header-medium img, .card-header-small img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 1.5em 1.5em 0 0;
+      width: 100%;
+      height: 250px;
+      /* display: flex;
+      flex-direction: column;
+      flex: 1; */
+      display: block;
+      margin: 1em;
   }
   .card-body {
-    background: white;
-    /* height: 10%; */
-    text-align: left;
-    padding-top: 1em;
-    padding-left: 1em;
+      padding-bottom: 1.5em;
   }
 }
 

@@ -272,6 +272,8 @@ h1 p {
   }
   .tags {
     display: block;
+    margin:0;
+  
   }
 }
 
@@ -425,8 +427,8 @@ h1 p {
   font-weight: bolder;
 }
 
-@media screen and (max-width: 900px) and (min-width: 414px) {
-  .lodging {
+@media screen and (max-width: 900px) /*and (min-width: 414px)*/ {
+  #lodging {
     padding: 0;
   }
   .container-city {
@@ -437,9 +439,7 @@ h1 p {
     padding: 0 0.5em;
     justify-content: center;
   }
-  /* .container-city h1 {
-      text-align: center;
-  } */
+  
   .card-box {
     display: flex;
     flex-direction: column;

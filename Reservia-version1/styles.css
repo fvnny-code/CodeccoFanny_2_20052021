@@ -277,7 +277,7 @@ h1 p {
 
 /* SECTION 2  HÉBERGEMENTS */
 
-.lodging {
+#lodging {
   max-width: 1700px;
   padding: 40px;
   display: flex;
@@ -496,7 +496,7 @@ h1 p {
 
 /* SECTION 3 ACTIVITES */
 
-.activities h1 {
+#activities h1 {
   padding-left: 1.5em;
   margin-top: 3rem;
 }

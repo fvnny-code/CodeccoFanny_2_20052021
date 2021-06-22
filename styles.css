@@ -706,7 +706,8 @@ footer {
   
   /* SECTION 1 : INFOS */
   .tag {
-    font-size: 15px;
+    font-size: 0.8em;
+  
   }
   /* SECTION 2 : HÉBERGEMENT */
   .container-city {
@@ -744,9 +745,16 @@ footer {
     font-size: 1.5em;
     padding: 1.5em 0;
   }
+
+/* SECTION 3 : ACTIVITES */
+
+.act{
+  padding: 0;
 }
 
-@media screen and (max-width: 390px) {
+}
+
+@media screen and (max-width: 390px){
   /* SECTION 1 : INFOS */
   #search {
     padding: 3em 10px;
@@ -756,6 +764,7 @@ footer {
   }
   .tag {
     padding: 0 0.5em;
+    margin-left: 0.5em;
   }
   .tag i {
     position: relative;
@@ -769,17 +778,22 @@ footer {
   .show-more{
     padding-left: 1.5em;
   }
+
+  .container-popular{
+    padding: 3em 1em;
+  }
   .container-popular h2 {
     font-size: 1.4em;
-    padding: 1.5em 0;
+    padding: 1.5em 0.5em;
   }
   .container-popular .clr-black {
     color: black;
     font-size: 1.5em;
     padding: 1.5em 0;
   }
+ 
   .card-aside .card-body {
-    padding: 0 0.3em;
+    padding: 0.5em;
   }
   .card-aside .card-body h3 {
     font-size: 1em;
@@ -787,17 +801,26 @@ footer {
   /* SECTION 3 ACTIVITES */
   
   #activities {
-    padding: 0;
+    padding: 1em;
   }
 
   #activities h1 {
     padding: 0 0.5em ;
   }
+ 
   .container-act{
     margin: 0;
     padding: 0;
   }
   .box-big, .box-medium-small {
     padding: 2em 0;
+    margin: 0;
   }
+
+/* .box-big{
+  margin-top: 0;
+}
+  .box-medium-small{
+    margin-bottom: 0;
+  } */
 }

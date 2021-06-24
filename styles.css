@@ -171,6 +171,7 @@ h1 p {
 .tags {
   display: inline-flex;
   align-items: center;
+  flex-wrap: wrap; /* passage à la ligne des tags */
   margin: 2em 0;
 }
 
@@ -252,7 +253,7 @@ h1 p {
   min-height: 250px;
   flex: 1 1 65%;
   width: 65%;
-  min-width: 40ch;
+  /* min-width: 40ch; */
 }
 
 .card-box {
@@ -555,7 +556,7 @@ footer {
   .container-city {
     flex: 3;
     width: 100%;
-    min-width: 40ch;
+    /* min-width: 40ch; */
     justify-content: center;
   }
   .card-box {
@@ -612,7 +613,7 @@ footer {
 
         /* iPad */
 
-@media screen and (max-width: 1040px) {
+@media screen and (max-width: 1055px) {
   /* SECTION 1 : INFOS */
   #searchbar {
     margin: 3em 0.5em;
@@ -632,7 +633,7 @@ footer {
   .container-city {
     flex: 1 1 100%;
     width: 100%;
-    min-width: 40ch;
+    /* min-width: 40ch; */
     justify-content: space-around;
     background: white;
     padding: 0;
@@ -706,7 +707,8 @@ footer {
   
   /* SECTION 1 : INFOS */
   .tag {
-    font-size: 0.8em;
+    padding: 0 0.5em;
+    margin-left: 0.5em;
   
   }
   /* SECTION 2 : HÉBERGEMENT */
@@ -763,8 +765,8 @@ footer {
     margin: 2em 0;
   }
   .tag {
-    padding: 0 0.5em;
-    margin-left: 0.5em;
+    font-size: 0.8em;
+
   }
   .tag i {
     position: relative;
@@ -780,7 +782,7 @@ footer {
   }
 
   .container-popular{
-    padding: 3em 1em;
+    padding: 3em 0.5em;
   }
   .container-popular h2 {
     font-size: 1.4em;
